@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="311"/>
+            <point key="canvasLocation" x="-476" y="-56"/>
         </scene>
         <!--Login Entry View Controller-->
         <scene sceneID="mib-ih-xS0">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fm-L5-E5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="311"/>
+            <point key="canvasLocation" x="282" y="-56"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="JSw-t3-8P8">
@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nS-dQ-HiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="311"/>
+            <point key="canvasLocation" x="1138" y="-56"/>
         </scene>
         <!--Verifcation Check View Controller-->
         <scene sceneID="Rpm-xg-qfe">
@@ -237,16 +237,27 @@
                                 <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-OL-9rB">
-                                <rect key="frame" x="155.66666666666666" y="481" width="81.666666666666657" height="31.333333333333371"/>
+                                <rect key="frame" x="146.33333333333334" y="481" width="100.66666666666666" height="37"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOGIN"/>
                                 <buttonConfiguration key="configuration" style="filled" title="VERIFY">
-                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="validateCode" destination="wPi-JW-v82" eventType="touchUpInside" id="5u1-Fi-civ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5f-sB-74w">
+                                <rect key="frame" x="149.66666666666666" y="528" width="93.666666666666657" height="37"/>
+                                <color key="tintColor" red="0.0" green="0.32002841900302542" blue="0.48058628483588928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="CLEAR">
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearPressed:" destination="wPi-JW-v82" eventType="touchUpInside" id="08g-fY-7Np"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER THE OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-CS-tU6">
@@ -265,8 +276,10 @@
                             <constraint firstItem="dw5-X4-He7" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="Rnf-NZ-jGs"/>
                             <constraint firstItem="dw5-X4-He7" firstAttribute="top" secondItem="bIA-CS-tU6" secondAttribute="bottom" constant="10" id="XjZ-OE-bmL"/>
                             <constraint firstItem="bIA-CS-tU6" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="Zyh-yp-9bT"/>
+                            <constraint firstItem="K5f-sB-74w" firstAttribute="top" secondItem="W6o-OL-9rB" secondAttribute="bottom" constant="10" id="igf-LF-CE1"/>
                             <constraint firstItem="W6o-OL-9rB" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="klz-AV-MdR"/>
                             <constraint firstItem="3od-Al-FDE" firstAttribute="top" secondItem="dw5-X4-He7" secondAttribute="bottom" constant="10" id="oct-94-EXg"/>
+                            <constraint firstItem="K5f-sB-74w" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="vrN-fk-7hE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oRo-9R-kYU"/>
@@ -278,12 +291,13 @@
                         <outlet property="codeField5" destination="thO-8N-Q8C" id="omE-rI-Rwj"/>
                         <outlet property="codeField6" destination="0aQ-Sm-Uik" id="zg7-pA-dOq"/>
                         <outlet property="errorLabel" destination="3od-Al-FDE" id="LKt-Lt-dch"/>
-                        <segue destination="IqG-Cm-kuI" kind="presentation" identifier="ShowSignUp" id="Mu0-tb-mv5"/>
+                        <segue destination="IqG-Cm-kuI" kind="presentation" identifier="ShowSignUp" destinationCreationSelector="showSignUp:" id="Mu0-tb-mv5"/>
+                        <segue destination="Fp9-F7-ac4" kind="presentation" identifier="ShowDashboard" id="5FP-Uw-3jZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWC-CA-nal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611" y="311"/>
+            <point key="canvasLocation" x="2013" y="-56"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="RHy-U0-zYZ">
@@ -385,7 +399,6 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aki-q9-ZoH">
                                 <rect key="frame" x="144.33333333333334" y="730" width="104.66666666666666" height="37"/>
-                                <color key="backgroundColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -393,6 +406,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="SUBMIT">
                                     <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="submitPressed:" destination="IqG-Cm-kuI" eventType="touchUpInside" id="aXv-LC-WoY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1px-Pw-hLq"/>
@@ -411,14 +427,36 @@
                     <navigationItem key="navigationItem" id="uep-1u-WXi"/>
                     <connections>
                         <outlet property="agePicker" destination="Rtb-cG-4q3" id="Y2n-4z-6OL"/>
+                        <outlet property="email" destination="Bsz-kB-3tY" id="veZ-FU-KSn"/>
+                        <outlet property="firstName" destination="aPW-21-QgA" id="RSt-tR-3hJ"/>
                         <outlet property="genderPicker" destination="dbU-F8-Fru" id="Lnj-XL-SSG"/>
+                        <outlet property="lastName" destination="G8g-vb-0p8" id="Pu4-Mr-Pbu"/>
+                        <segue destination="Fp9-F7-ac4" kind="presentation" identifier="SignupToDashboard" id="n1M-Fa-r96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAn-86-TIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3362.5954198473282" y="310.56338028169017"/>
+            <point key="canvasLocation" x="2927" y="-561"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="pCt-ej-63z">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Fp9-F7-ac4" customClass="DashboardViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mIN-kO-jRa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="67e-F1-64F"/>
+                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YoZ-SC-Irz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="462"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="n1M-Fa-r96"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="LandingPageIcon" width="540" height="540"/>
         <systemColor name="systemRedColor">

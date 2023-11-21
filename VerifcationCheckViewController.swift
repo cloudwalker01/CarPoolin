@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VerifcationCheckViewController: UIViewController {
+class VerifcationCheckViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet var codeField1: UITextField!
@@ -17,10 +17,18 @@ class VerifcationCheckViewController: UIViewController {
     @IBOutlet var codeField5: UITextField!
     @IBOutlet var codeField6: UITextField!
     @IBOutlet var errorLabel: UILabel! = UILabel()
+    
+    
        
     var countryCode: String?
     var phoneNumber: String?
     var resultMessage: String?
+    
+    private var manager = DatabaseManager()
+    
+    var mobNo: String {
+        countryCode! + phoneNumber!
+    }
     
     init?(coder: NSCoder, countryCode: String, phoneNumber: String) {
         self.countryCode = countryCode
@@ -43,7 +51,12 @@ class VerifcationCheckViewController: UIViewController {
                 if (checked.success)
                 {
                     self.resultMessage = checked.message
-                    self.performSegue(withIdentifier: "ShowSignUp", sender: nil)
+                    if !self.manager.doesUserExist(phoneNumber: self.mobNo) {
+                        self.performSegue(withIdentifier: "ShowSignUp", sender: nil)
+                    }
+                    else {
+                        self.performSegue(withIdentifier: "ShowDashboard", sender: nil)
+                    }
                 }
                 else
                 {
@@ -52,15 +65,62 @@ class VerifcationCheckViewController: UIViewController {
             }
         }
     }
-       
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            // Check if the length of the entered text is 1 (a single digit)
+            if (textField.text?.count ?? 0) == 1 {
+                // Move to the next text field
+                switch textField {
+                case codeField1:
+                    codeField2.becomeFirstResponder()
+                case codeField2:
+                    codeField3.becomeFirstResponder()
+                case codeField3:
+                    codeField4.becomeFirstResponder()
+                case codeField4:
+                    codeField5.becomeFirstResponder()
+                case codeField5:
+                    codeField6.becomeFirstResponder()
+                    // Move to the next text field or handle accordingly
+                    // Example: textField3.becomeFirstResponder()
+                // Add cases for the remaining text fields
+                default:
+                    break
+                }
+            }
 
+            // Allow the character change
+            return true
+        }
+
+       
+    @IBAction func clearPressed(_ sender: Any) {
+        codeField1.text = ""
+        codeField2.text = ""
+        codeField3.text = ""
+        codeField4.text = ""
+        codeField5.text = ""
+        codeField6.text = ""
+        codeField1.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        codeField1.delegate = self
+        codeField2.delegate = self
+        codeField3.delegate = self
+        codeField4.delegate = self
+        codeField5.delegate = self
+        codeField6.delegate = self
         // Do any additional setup after loading the view.
     }
     
 
+    @IBSegueAction func showSignUp(_ coder: NSCoder) -> SignUpViewController? {
+        
+        return SignUpViewController(coder: coder, phoneNumber: mobNo)
+    }
     /*
     // MARK: - Navigation
 
