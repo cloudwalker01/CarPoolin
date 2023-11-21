@@ -16,6 +16,12 @@
 		3F300BCB2B0B5658007F933B /* CarPoolInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BCA2B0B5658007F933B /* CarPoolInTests.swift */; };
 		3F300BD52B0B5658007F933B /* CarPoolInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BD42B0B5658007F933B /* CarPoolInUITests.swift */; };
 		3F300BD72B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BD62B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift */; };
+		90A2858C2B0B77A4003C21BE /* LoginEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */; };
+		90A2858E2B0B7D45003C21BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858D2B0B7D45003C21BE /* LoginViewController.swift */; };
+		90A285902B0C7FD0003C21BE /* verifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */; };
+		90A285922B0C9A4F003C21BE /* VerifcationCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285912B0C9A4F003C21BE /* VerifcationCheckViewController.swift */; };
+		90A285942B0CAD93003C21BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285932B0CAD93003C21BE /* SignUpViewController.swift */; };
+		90A285972B0CB5D1003C21BE /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90A285952B0CB5D1003C21BE /* UserModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		3F300BD02B0B5658007F933B /* CarPoolInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarPoolInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F300BD42B0B5658007F933B /* CarPoolInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolInUITests.swift; sourceTree = "<group>"; };
 		3F300BD62B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolInUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryViewController.swift; sourceTree = "<group>"; };
+		90A2858D2B0B7D45003C21BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyAPI.swift; sourceTree = SOURCE_ROOT; };
+		90A285912B0C9A4F003C21BE /* VerifcationCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifcationCheckViewController.swift; sourceTree = SOURCE_ROOT; };
+		90A285932B0CAD93003C21BE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		90A285962B0CB5D1003C21BE /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,19 @@
 		3F300BB22B0B5655007F933B /* CarPoolIn */ = {
 			isa = PBXGroup;
 			children = (
+				90A285952B0CB5D1003C21BE /* UserModel.xcdatamodeld */,
+				90A2858D2B0B7D45003C21BE /* LoginViewController.swift */,
 				3F300BB32B0B5655007F933B /* AppDelegate.swift */,
 				3F300BB52B0B5655007F933B /* SceneDelegate.swift */,
 				3F300BB72B0B5655007F933B /* ViewController.swift */,
+				90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */,
 				3F300BB92B0B5655007F933B /* Main.storyboard */,
+				90A285932B0CAD93003C21BE /* SignUpViewController.swift */,
+				90A285912B0C9A4F003C21BE /* VerifcationCheckViewController.swift */,
 				3F300BBC2B0B5657007F933B /* Assets.xcassets */,
 				3F300BBE2B0B5657007F933B /* LaunchScreen.storyboard */,
 				3F300BC12B0B5657007F933B /* Info.plist */,
+				90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */,
 			);
 			path = CarPoolIn;
 			sourceTree = "<group>";
@@ -260,7 +278,13 @@
 			files = (
 				3F300BB82B0B5655007F933B /* ViewController.swift in Sources */,
 				3F300BB42B0B5655007F933B /* AppDelegate.swift in Sources */,
+				90A285942B0CAD93003C21BE /* SignUpViewController.swift in Sources */,
 				3F300BB62B0B5655007F933B /* SceneDelegate.swift in Sources */,
+				90A285902B0C7FD0003C21BE /* verifyAPI.swift in Sources */,
+				90A2858E2B0B7D45003C21BE /* LoginViewController.swift in Sources */,
+				90A2858C2B0B77A4003C21BE /* LoginEntryViewController.swift in Sources */,
+				90A285922B0C9A4F003C21BE /* VerifcationCheckViewController.swift in Sources */,
+				90A285972B0CB5D1003C21BE /* UserModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +620,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90A285952B0CB5D1003C21BE /* UserModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90A285962B0CB5D1003C21BE /* UserModel.xcdatamodel */,
+			);
+			currentVersion = 90A285962B0CB5D1003C21BE /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3F300BA82B0B5655007F933B /* Project object */;
 }
