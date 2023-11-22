@@ -16,6 +16,8 @@
 		3F300BCB2B0B5658007F933B /* CarPoolInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BCA2B0B5658007F933B /* CarPoolInTests.swift */; };
 		3F300BD52B0B5658007F933B /* CarPoolInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BD42B0B5658007F933B /* CarPoolInUITests.swift */; };
 		3F300BD72B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F300BD62B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift */; };
+		901682002B0DFE40000EA081 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901681FF2B0DFE40000EA081 /* MapKit.framework */; };
+		901682022B0DFE73000EA081 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901682012B0DFE73000EA081 /* CoreData.framework */; };
 		90A2858C2B0B77A4003C21BE /* LoginEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */; };
 		90A2858E2B0B7D45003C21BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858D2B0B7D45003C21BE /* LoginViewController.swift */; };
 		90A285902B0C7FD0003C21BE /* verifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */; };
@@ -24,7 +26,9 @@
 		90A285972B0CB5D1003C21BE /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90A285952B0CB5D1003C21BE /* UserModel.xcdatamodeld */; };
 		90A285992B0CD72F003C21BE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285982B0CD72F003C21BE /* DatabaseManager.swift */; };
 		90A2859B2B0CD785003C21BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2859A2B0CD785003C21BE /* User.swift */; };
-		90A2859D2B0CDD41003C21BE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2859C2B0CDD41003C21BE /* DashboardViewController.swift */; };
+		90A2859F2B0DF91B003C21BE /* FindRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2859E2B0DF91B003C21BE /* FindRideViewController.swift */; };
+		90A285A12B0DF92D003C21BE /* OfferRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285A02B0DF92D003C21BE /* OfferRideViewController.swift */; };
+		90A285A32B0DF93E003C21BE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A285A22B0DF93E003C21BE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		3F300BD02B0B5658007F933B /* CarPoolInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarPoolInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F300BD42B0B5658007F933B /* CarPoolInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolInUITests.swift; sourceTree = "<group>"; };
 		3F300BD62B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPoolInUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		901681FF2B0DFE40000EA081 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		901682012B0DFE73000EA081 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryViewController.swift; sourceTree = "<group>"; };
 		90A2858D2B0B7D45003C21BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyAPI.swift; sourceTree = SOURCE_ROOT; };
@@ -66,7 +72,9 @@
 		90A285962B0CB5D1003C21BE /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		90A285982B0CD72F003C21BE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		90A2859A2B0CD785003C21BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		90A2859C2B0CDD41003C21BE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		90A2859E2B0DF91B003C21BE /* FindRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRideViewController.swift; sourceTree = "<group>"; };
+		90A285A02B0DF92D003C21BE /* OfferRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRideViewController.swift; sourceTree = "<group>"; };
+		90A285A22B0DF93E003C21BE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901682002B0DFE40000EA081 /* MapKit.framework in Frameworks */,
+				901682022B0DFE73000EA081 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,7 @@
 				3F300BC92B0B5658007F933B /* CarPoolInTests */,
 				3F300BD32B0B5658007F933B /* CarPoolInUITests */,
 				3F300BB12B0B5655007F933B /* Products */,
+				901681FE2B0DFE3F000EA081 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,7 +137,9 @@
 				3F300BB72B0B5655007F933B /* ViewController.swift */,
 				90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */,
 				3F300BB92B0B5655007F933B /* Main.storyboard */,
-				90A2859C2B0CDD41003C21BE /* DashboardViewController.swift */,
+				90A2859E2B0DF91B003C21BE /* FindRideViewController.swift */,
+				90A285A02B0DF92D003C21BE /* OfferRideViewController.swift */,
+				90A285A22B0DF93E003C21BE /* ProfileViewController.swift */,
 				90A285932B0CAD93003C21BE /* SignUpViewController.swift */,
 				90A285912B0C9A4F003C21BE /* VerifcationCheckViewController.swift */,
 				3F300BBC2B0B5657007F933B /* Assets.xcassets */,
@@ -152,6 +165,15 @@
 				3F300BD62B0B5658007F933B /* CarPoolInUITestsLaunchTests.swift */,
 			);
 			path = CarPoolInUITests;
+			sourceTree = "<group>";
+		};
+		901681FE2B0DFE3F000EA081 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				901682012B0DFE73000EA081 /* CoreData.framework */,
+				901681FF2B0DFE40000EA081 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,13 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F300BB82B0B5655007F933B /* ViewController.swift in Sources */,
+				90A285A12B0DF92D003C21BE /* OfferRideViewController.swift in Sources */,
 				3F300BB42B0B5655007F933B /* AppDelegate.swift in Sources */,
 				90A285992B0CD72F003C21BE /* DatabaseManager.swift in Sources */,
+				90A285A32B0DF93E003C21BE /* ProfileViewController.swift in Sources */,
 				90A285942B0CAD93003C21BE /* SignUpViewController.swift in Sources */,
 				3F300BB62B0B5655007F933B /* SceneDelegate.swift in Sources */,
 				90A285902B0C7FD0003C21BE /* verifyAPI.swift in Sources */,
 				90A2858E2B0B7D45003C21BE /* LoginViewController.swift in Sources */,
-				90A2859D2B0CDD41003C21BE /* DashboardViewController.swift in Sources */,
+				90A2859F2B0DF91B003C21BE /* FindRideViewController.swift in Sources */,
 				90A2858C2B0B77A4003C21BE /* LoginEntryViewController.swift in Sources */,
 				90A285922B0C9A4F003C21BE /* VerifcationCheckViewController.swift in Sources */,
 				90A285972B0CB5D1003C21BE /* UserModel.xcdatamodeld in Sources */,
@@ -473,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3U72GRK4NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarPoolIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -500,6 +525,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3U72GRK4NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarPoolIn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,13 +1,13 @@
 //
-//  DashboardViewController.swift
+//  ProfileViewController.swift
 //  CarPoolIn
 //
-//  Created by Arnav Agarwal on 21/11/23.
+//  Created by Arnav Agarwal on 22/11/23.
 //
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

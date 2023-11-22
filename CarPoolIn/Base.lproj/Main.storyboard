@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,11 +41,12 @@
                     </view>
                     <connections>
                         <segue destination="Wka-gA-1wY" kind="presentation" identifier="LandingToLogin" id="C3E-8L-7ge"/>
+                        <segue destination="AHh-g6-Cf3" kind="presentation" identifier="DashboardDebug" id="WSI-3a-PMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-56"/>
+            <point key="canvasLocation" x="-544" y="-56"/>
         </scene>
         <!--Login Entry View Controller-->
         <scene sceneID="mib-ih-xS0">
@@ -107,21 +109,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENTER YOUR PHONE NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-b6-kjq">
-                                <rect key="frame" x="41" y="414" width="311" height="23"/>
+                                <rect key="frame" x="41" y="327" width="311" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TRj-E7-YVE">
-                                <rect key="frame" x="80" y="445" width="272" height="34"/>
+                                <rect key="frame" x="80" y="369" width="272" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88457041979999995" green="0.88885730500000004" blue="0.86317855119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-c7-7dY">
+                                <rect key="frame" x="38" y="375" width="34" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGJ-Zp-8TF">
-                                <rect key="frame" x="95" y="487" width="203.33333333333348" height="35"/>
+                                <rect key="frame" x="95" y="419" width="203.33333333333348" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -134,13 +143,6 @@
                                     <action selector="sendVerification" destination="Uss-FC-tEg" eventType="touchUpInside" id="ul4-ma-pdv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-c7-7dY">
-                                <rect key="frame" x="41" y="451" width="34" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zGK-s1-yft"/>
                         <color key="backgroundColor" red="0.97241288420000005" green="0.97666031119999996" blue="0.94902902840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -154,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nS-dQ-HiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="-56"/>
+            <point key="canvasLocation" x="1131" y="-56"/>
         </scene>
         <!--Verifcation Check View Controller-->
         <scene sceneID="Rpm-xg-qfe">
@@ -292,7 +294,7 @@
                         <outlet property="codeField6" destination="0aQ-Sm-Uik" id="zg7-pA-dOq"/>
                         <outlet property="errorLabel" destination="3od-Al-FDE" id="LKt-Lt-dch"/>
                         <segue destination="IqG-Cm-kuI" kind="presentation" identifier="ShowSignUp" destinationCreationSelector="showSignUp:" id="Mu0-tb-mv5"/>
-                        <segue destination="Fp9-F7-ac4" kind="presentation" identifier="ShowDashboard" id="5FP-Uw-3jZ"/>
+                        <segue destination="AHh-g6-Cf3" kind="presentation" identifier="ShowDashboard" id="5FP-Uw-3jZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWC-CA-nal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,36 +433,147 @@
                         <outlet property="firstName" destination="aPW-21-QgA" id="RSt-tR-3hJ"/>
                         <outlet property="genderPicker" destination="dbU-F8-Fru" id="Lnj-XL-SSG"/>
                         <outlet property="lastName" destination="G8g-vb-0p8" id="Pu4-Mr-Pbu"/>
-                        <segue destination="Fp9-F7-ac4" kind="presentation" identifier="SignupToDashboard" id="n1M-Fa-r96"/>
+                        <segue destination="AHh-g6-Cf3" kind="presentation" identifier="SignupToDashboard" id="n1M-Fa-r96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAn-86-TIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2927" y="-561"/>
         </scene>
-        <!--Dashboard View Controller-->
+        <!--Find a Ride-->
         <scene sceneID="pCt-ej-63z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Fp9-F7-ac4" customClass="DashboardViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Find a Ride" modalPresentationStyle="fullScreen" id="Fp9-F7-ac4" customClass="FindRideViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIN-kO-jRa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Destination" translatesAutoresizingMaskIntoConstraints="NO" id="fm1-Ew-n5o">
+                                <rect key="frame" x="10" y="5" width="373" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="d6Y-Ok-qXd"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits" textContentType="location"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Fp9-F7-ac4" id="tXK-T3-P5I"/>
+                                </connections>
+                            </searchBar>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gnx-0h-lWa">
+                                <rect key="frame" x="10" y="65" width="373" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="suggestionCell" id="fE7-Ww-Bpv">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="51.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fE7-Ww-Bpv" id="BHu-4v-XZk">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="51.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-DO-fCd">
+                                <rect key="frame" x="10" y="65" width="373" height="708"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="67e-F1-64F"/>
                         <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="67e-F1-64F" firstAttribute="bottom" secondItem="Gnx-0h-lWa" secondAttribute="bottom" constant="20" id="1o3-Qo-4vA"/>
+                            <constraint firstItem="67e-F1-64F" firstAttribute="trailing" secondItem="fm1-Ew-n5o" secondAttribute="trailing" constant="10" id="4Oc-JO-2hb"/>
+                            <constraint firstItem="CuA-DO-fCd" firstAttribute="top" secondItem="fm1-Ew-n5o" secondAttribute="bottom" id="Eaj-tc-Exq"/>
+                            <constraint firstItem="fm1-Ew-n5o" firstAttribute="leading" secondItem="67e-F1-64F" secondAttribute="leading" constant="10" id="M2S-o4-hTq"/>
+                            <constraint firstItem="Gnx-0h-lWa" firstAttribute="leading" secondItem="67e-F1-64F" secondAttribute="leading" constant="10" id="SJE-yb-gAk"/>
+                            <constraint firstItem="67e-F1-64F" firstAttribute="bottom" secondItem="CuA-DO-fCd" secondAttribute="bottom" constant="30" id="Sh8-lj-HEo"/>
+                            <constraint firstItem="67e-F1-64F" firstAttribute="trailing" secondItem="Gnx-0h-lWa" secondAttribute="trailing" constant="10" id="isc-Kd-K07"/>
+                            <constraint firstItem="67e-F1-64F" firstAttribute="trailing" secondItem="CuA-DO-fCd" secondAttribute="trailing" constant="10" id="nNZ-Cx-xh4"/>
+                            <constraint firstItem="fm1-Ew-n5o" firstAttribute="top" secondItem="67e-F1-64F" secondAttribute="top" constant="5" id="sjE-sb-CG6"/>
+                            <constraint firstItem="CuA-DO-fCd" firstAttribute="leading" secondItem="67e-F1-64F" secondAttribute="leading" constant="10" id="sk8-Mc-2Fw"/>
+                            <constraint firstItem="Gnx-0h-lWa" firstAttribute="top" secondItem="fm1-Ew-n5o" secondAttribute="bottom" id="wei-Gd-ysY"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Find" image="carseat.left.fill" catalog="system" id="rUU-kV-5eL"/>
+                    <connections>
+                        <outlet property="mapView" destination="CuA-DO-fCd" id="GUz-FB-lfy"/>
+                        <outlet property="searchBar" destination="fm1-Ew-n5o" id="KTh-ba-L0I"/>
+                        <outlet property="suggestionsTableView" destination="Gnx-0h-lWa" id="gFe-N8-PeT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoZ-SC-Irz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="462"/>
+            <point key="canvasLocation" x="2012.9770992366412" y="1262.6760563380283"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="5Jt-1H-abV">
+            <objects>
+                <viewController title="Profile" id="cXA-WQ-9Fx" customClass="ProfileViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5y-70-iwh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ca2-Hh-Nyb"/>
+                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="O1Z-di-bF7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zL-CJ-TWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3834" y="1263"/>
+        </scene>
+        <!--Offer a Ride-->
+        <scene sceneID="PVz-hw-A4f">
+            <objects>
+                <viewController title="Offer a Ride" id="sJl-Pn-Dfm" customClass="OfferRideViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpp-AY-gqd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Lrk-MF-Qfk"/>
+                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Offer" image="car.fill" catalog="system" id="kAT-TU-v3H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mpy-Q1-rEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2926" y="1263"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x8x-sL-beX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="AHh-g6-Cf3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RZP-sv-Tp7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fp9-F7-ac4" kind="relationship" relationship="viewControllers" id="x0e-PA-xNr"/>
+                        <segue destination="sJl-Pn-Dfm" kind="relationship" relationship="viewControllers" id="T6s-EQ-65D"/>
+                        <segue destination="cXA-WQ-9Fx" kind="relationship" relationship="viewControllers" id="a5C-if-VzW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-ro-8kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925.9541984732823" y="423.94366197183103"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n1M-Fa-r96"/>
+        <segue reference="WSI-3a-PMb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LandingPageIcon" width="540" height="540"/>
+        <image name="car.fill" catalog="system" width="128" height="95"/>
+        <image name="carseat.left.fill" catalog="system" width="128" height="109"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
