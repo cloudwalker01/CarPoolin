@@ -8,33 +8,93 @@
 import UIKit
 import MapKit
 
-class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, MKLocalSearchCompleterDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
-    
 
+class DraggablePin: NSObject, MKAnnotation {
+    dynamic var coordinate: CLLocationCoordinate2D
+
+    init(coordinate: CLLocationCoordinate2D) {
+        self.coordinate = coordinate
+        super.init()
+    }
+}
+
+
+class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate, MKLocalSearchCompleterDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var destinationSearchBar: UISearchBar!
+    @IBOutlet var originSearchBar: UISearchBar!
     @IBOutlet var suggestionsTableView: UITableView!
+    
+    private var originAnnotation: MKPointAnnotation?
+    private var destinationAnnotation: MKPointAnnotation?
     private var locationManager = CLLocationManager()
     private var searchCompleter = MKLocalSearchCompleter()
     private var searchResults = [MKLocalSearchCompletion]()
+    private var phoneNumber: String? = nil
     
+    private var manager = DatabaseManager()
+    
+    var isOrigin: Bool = true
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        if let tabBarController = tabBarController as? DashboardTabBarController {
+            phoneNumber = tabBarController.phoneNumber
+        }
+        
         mapView.mapType = .standard
-        searchBar.delegate = self
+        destinationSearchBar.delegate = self
+        originSearchBar.delegate = self
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-
+        
         // Set up search completer
         searchCompleter.delegate = self
         
         suggestionsTableView.delegate = self
         suggestionsTableView.dataSource = self
         suggestionsTableView.isHidden = true
+        
+        mapView.delegate = self
+        
+        mapView.mapType = .standard
+        mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeChanged), for: .valueChanged)
+        
+        let locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+
+        
+        
+       
         // Do any additional setup after loading the view.
     }
+    @objc func mapTypeChanged() {
+        switch mapTypeSegmentedControl.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        case 2:
+            mapView.mapType = .hybrid
+        default:
+            break
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is DraggablePin {
+            let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "draggablePin")
+            pinView.isDraggable = true
+            pinView.animatesDrop = true
+            return pinView
+        }
+        return nil
+    }
+
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder() // Dismiss the keyboard
@@ -63,13 +123,26 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
     }
 
     func displayLocationOnMap(_ mapItem: MKMapItem) {
-        // Clear previous annotations on the map
-        mapView.removeAnnotations(mapView.annotations)
 
         // Add a new annotation for the selected location
         let annotation = MKPointAnnotation()
         annotation.coordinate = mapItem.placemark.coordinate
         annotation.title = mapItem.name
+        
+        if isOrigin 
+        {
+            if let tempAnnotation = originAnnotation {
+                mapView.removeAnnotation(tempAnnotation)
+            }
+            originAnnotation = annotation
+        }
+        else
+        {
+            if let tempAnnotation = destinationAnnotation {
+                mapView.removeAnnotation(tempAnnotation)
+            }
+            destinationAnnotation = annotation
+        }
 
         mapView.addAnnotation(annotation)
 
@@ -79,6 +152,20 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        switch searchBar {
+        case originSearchBar:
+            isOrigin = true
+            if let tempAnnotation = originAnnotation {
+                mapView.removeAnnotation(tempAnnotation)
+            }
+        case destinationSearchBar:
+            isOrigin = false
+            if let tempAnnotation = destinationAnnotation {
+                mapView.removeAnnotation(tempAnnotation)
+            }
+        default:
+            isOrigin = true
+        }
         searchCompleter.queryFragment = searchText
         suggestionsTableView.isHidden = searchText.isEmpty
         mapView.isHidden = !searchText.isEmpty
@@ -97,6 +184,7 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionCell", for: indexPath)
+      
             
         cell.textLabel?.text = searchResults[indexPath.row].title
         cell.detailTextLabel?.text = searchResults[indexPath.row].subtitle
@@ -108,11 +196,46 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         let selectedSuggestion = searchResults[indexPath.row]
             // Handle the selected suggestion, e.g., display it on the map
             // ...
-        searchBar.text = selectedSuggestion.title // Optionally, update the search bar with the selected suggestion
+        if isOrigin {
+            originSearchBar.text = selectedSuggestion.title
+            searchForLocation(selectedSuggestion.title)
+        }
+        else {
+            destinationSearchBar.text = selectedSuggestion.title
+            searchForLocation(selectedSuggestion.title)
+        }
+        
         suggestionsTableView.isHidden = true
         mapView.isHidden = false
     }
 
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                // Handle OK button tap, if needed
+        }
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func submitFindRidePressed(_ sender: Any) {
+        guard let origin = originSearchBar.text, !origin.isEmpty else {
+            // Put alert
+            showAlert(title: "Invalid Details", message: "Enter Origin")
+            return
+        }
+        
+        guard let destination = destinationSearchBar.text, !destination.isEmpty else {
+            // Put alert
+            showAlert(title: "Invalid Details", message: "Enter Destination")
+            return
+        }
+        
+        let newFindRide = FindRide(origin: origin, destination: origin, phoneNumber: phoneNumber!)
+        manager.addFindRide(newFindRide)
+    }
     /*
     // MARK: - Navigation
 

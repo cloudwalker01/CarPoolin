@@ -46,4 +46,31 @@ class DatabaseManager{
             return false
         }
     }
+    
+    func addFindRide(_ findRide: FindRide) {
+        let findRideEntity = FindRideEntity(context: context)
+        findRideEntity.origin = findRide.origin
+        findRideEntity.destination = findRide.destination
+        findRideEntity.phoneNumber = findRide.phoneNumber
+        do {
+            try context.save()
+        }
+        catch {
+            print("Find Ride saving error", error)
+        }
+    }
+    
+    func addOfferRide(_ offerRide: OfferRide) {
+        let offerRideEntity = OfferRideEntity(context: context)
+        offerRideEntity.origin = offerRide.origin
+        offerRideEntity.destination = offerRide.destination
+        offerRideEntity.phoneNumber = offerRide.phoneNumber
+        offerRideEntity.plateNumber = offerRide.plateNumber
+        do {
+            try context.save()
+        }
+        catch {
+            print("Find Ride saving error", error)
+        }
+    }
 }

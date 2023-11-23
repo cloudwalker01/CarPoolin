@@ -25,3 +25,16 @@ class User
         self.age = age
     }
 }
+
+struct FindRide {
+    let origin: String
+    let destination: String
+    let phoneNumber: String
+}
+
+struct OfferRide {
+    let origin: String
+    let destination: String
+    let phoneNumber: String
+    let plateNumber: String
+}

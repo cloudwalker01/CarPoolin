@@ -142,6 +142,10 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         performSegue(withIdentifier: "SignupToDashboard", sender: nil)
     }
     
-
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let tabBarController = segue.destination as? DashboardTabBarController {
+                tabBarController.phoneNumber = phoneNumber // Set the actual mobile number here
+            }
+    }
+    
 }
