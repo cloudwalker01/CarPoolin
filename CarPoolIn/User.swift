@@ -37,4 +37,5 @@ struct OfferRide {
     let destination: String
     let phoneNumber: String
     let plateNumber: String
+    let date: Date
 }

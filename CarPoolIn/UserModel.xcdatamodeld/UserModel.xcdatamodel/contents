@@ -6,6 +6,7 @@
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
     </entity>
     <entity name="OfferRideEntity" representedClassName="OfferRideEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="destination" optional="YES" attributeType="String"/>
         <attribute name="origin" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>

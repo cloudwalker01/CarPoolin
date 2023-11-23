@@ -66,11 +66,25 @@ class DatabaseManager{
         offerRideEntity.destination = offerRide.destination
         offerRideEntity.phoneNumber = offerRide.phoneNumber
         offerRideEntity.plateNumber = offerRide.plateNumber
+        offerRideEntity.date = Date()
         do {
             try context.save()
         }
         catch {
             print("Find Ride saving error", error)
         }
+    }
+    
+    func fetchExistingRides() -> [OfferRideEntity]
+    {
+        var existingRides: [OfferRideEntity] = []
+        
+        do{
+            existingRides = try context.fetch(OfferRideEntity.fetchRequest())
+        }catch{
+            print("Fetch user error", error)
+        }
+        return existingRides
+        
     }
 }

@@ -228,8 +228,13 @@ class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocation
         }
         
         
-        let newOfferRide = OfferRide(origin: origin, destination: destination, phoneNumber: phoneNumber!, plateNumber: plateNumber)
+        let newOfferRide = OfferRide(origin: origin, destination: destination, phoneNumber: phoneNumber!, plateNumber: plateNumber, date: Date())
         manager.addOfferRide(newOfferRide)
+        
+        showAlert(title: "Successful", message: "Ride offered")
+        originSearchBar.text=""
+        destinationSearchBar.text=""
+        plateNumberTextField.text=""
     }
     /*
     // MARK: - Navigation

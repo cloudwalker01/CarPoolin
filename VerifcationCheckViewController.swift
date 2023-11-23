@@ -92,6 +92,47 @@ class VerifcationCheckViewController: UIViewController, UITextFieldDelegate {
             // Allow the character change
             return true
         }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if string.isEmpty {
+//            // Backspace was pressed
+//            switch textField {
+//            case codeField2:
+//                codeField1.becomeFirstResponder()
+//            case codeField3:
+//                codeField2.becomeFirstResponder()
+//            case codeField4:
+//                codeField3.becomeFirstResponder()
+//            case codeField5:
+//                codeField4.becomeFirstResponder()
+//            case codeField6:
+//                codeField5.becomeFirstResponder()
+//            // Add cases for the remaining text fields
+//            default:
+//                break
+//            }
+//        } else if (textField.text?.count ?? 0) == 1 {
+//            // Move to the next text field when a digit is entered
+//            switch textField {
+//            case codeField1:
+//                codeField2.becomeFirstResponder()
+//            case codeField2:
+//                codeField3.becomeFirstResponder()
+//            case codeField3:
+//                codeField4.becomeFirstResponder()
+//            case codeField4:
+//                codeField5.becomeFirstResponder()
+//            case codeField5:
+//                codeField6.becomeFirstResponder()
+//            // Add cases for the remaining text fields
+//            default:
+//                break
+//            }
+//        }
+//
+//        // Allow the character change
+//        return true
+//    }
 
        
     @IBAction func clearPressed(_ sender: Any) {

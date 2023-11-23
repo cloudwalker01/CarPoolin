@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @objc func transitionToLoadingPage() {
-        performSegue(withIdentifier: "LandingToLogin", sender: self)
+        performSegue(withIdentifier: "DashboardDebug", sender: self)
     }
 }
 

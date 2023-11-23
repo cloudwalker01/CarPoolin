@@ -19,6 +19,7 @@
 		901682002B0DFE40000EA081 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901681FF2B0DFE40000EA081 /* MapKit.framework */; };
 		901682022B0DFE73000EA081 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901682012B0DFE73000EA081 /* CoreData.framework */; };
 		901682062B0F576A000EA081 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901682052B0F576A000EA081 /* DashboardTabBarController.swift */; };
+		906F87422B0FE752000ABF4D /* ExisitingRidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906F87412B0FE752000ABF4D /* ExisitingRidesViewController.swift */; };
 		90A2858C2B0B77A4003C21BE /* LoginEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */; };
 		90A2858E2B0B7D45003C21BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858D2B0B7D45003C21BE /* LoginViewController.swift */; };
 		90A285902B0C7FD0003C21BE /* verifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */; };
@@ -66,6 +67,7 @@
 		901681FF2B0DFE40000EA081 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		901682012B0DFE73000EA081 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		901682052B0F576A000EA081 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
+		906F87412B0FE752000ABF4D /* ExisitingRidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExisitingRidesViewController.swift; sourceTree = "<group>"; };
 		90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryViewController.swift; sourceTree = "<group>"; };
 		90A2858D2B0B7D45003C21BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90A2858F2B0C7FD0003C21BE /* verifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyAPI.swift; sourceTree = SOURCE_ROOT; };
@@ -139,6 +141,7 @@
 				3F300BB72B0B5655007F933B /* ViewController.swift */,
 				90A2858B2B0B77A4003C21BE /* LoginEntryViewController.swift */,
 				3F300BB92B0B5655007F933B /* Main.storyboard */,
+				906F87412B0FE752000ABF4D /* ExisitingRidesViewController.swift */,
 				901682052B0F576A000EA081 /* DashboardTabBarController.swift */,
 				90A2859E2B0DF91B003C21BE /* FindRideViewController.swift */,
 				90A285A02B0DF92D003C21BE /* OfferRideViewController.swift */,
@@ -313,6 +316,7 @@
 				3F300BB82B0B5655007F933B /* ViewController.swift in Sources */,
 				901682062B0F576A000EA081 /* DashboardTabBarController.swift in Sources */,
 				90A285A12B0DF92D003C21BE /* OfferRideViewController.swift in Sources */,
+				906F87422B0FE752000ABF4D /* ExisitingRidesViewController.swift in Sources */,
 				3F300BB42B0B5655007F933B /* AppDelegate.swift in Sources */,
 				90A285992B0CD72F003C21BE /* DatabaseManager.swift in Sources */,
 				90A285A32B0DF93E003C21BE /* ProfileViewController.swift in Sources */,
