@@ -57,34 +57,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LandingPageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XVL-xd-Mm9">
-                                <rect key="frame" x="24" y="59" width="344" height="373"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LandingPageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XVL-xd-Mm9">
+                                <rect key="frame" x="25" y="0.0" width="343" height="540"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME BACK!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHI-CH-qLN">
-                                <rect key="frame" x="96" y="440" width="203.33333333333348" height="26.666666666666686"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME BACK!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHI-CH-qLN">
+                                <rect key="frame" x="96.000000000000014" y="540" width="203.33333333333337" height="26.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login/Create Account to &lt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IH-qT-DH8">
-                                <rect key="frame" x="95" y="467" width="203.33333333333348" height="17.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login/Create Account to &lt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IH-qT-DH8">
+                                <rect key="frame" x="95.000000000000014" y="566.66666666666663" width="203.33333333333337" height="17.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQJ-RO-E0V">
-                                <rect key="frame" x="96" y="527" width="203.33333333333348" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQJ-RO-E0V">
+                                <rect key="frame" x="96.000000000000014" y="626.66666666666663" width="203.33333333333337" height="37"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOGIN"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOGIN">
-                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                     <color key="baseBackgroundColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -94,6 +90,23 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tNw-Uh-PiC"/>
                         <color key="backgroundColor" red="0.97241288420000005" green="0.97666031119999996" blue="0.94902902840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="XVL-xd-Mm9" firstAttribute="top" secondItem="tNw-Uh-PiC" secondAttribute="top" id="2K9-2J-7k1"/>
+                            <constraint firstItem="tNw-Uh-PiC" firstAttribute="trailing" secondItem="kQJ-RO-E0V" secondAttribute="trailing" constant="93.670000000000002" id="FNU-GU-rWA"/>
+                            <constraint firstItem="aHI-CH-qLN" firstAttribute="top" secondItem="XVL-xd-Mm9" secondAttribute="bottom" id="M7g-Z0-XTG"/>
+                            <constraint firstItem="9IH-qT-DH8" firstAttribute="centerX" secondItem="Qru-5J-aAa" secondAttribute="centerX" id="N3C-g5-QFY"/>
+                            <constraint firstItem="aHI-CH-qLN" firstAttribute="centerX" secondItem="Qru-5J-aAa" secondAttribute="centerX" id="OCV-Iz-Pao"/>
+                            <constraint firstItem="tNw-Uh-PiC" firstAttribute="trailing" secondItem="XVL-xd-Mm9" secondAttribute="trailing" constant="25" id="QMg-gb-zY3"/>
+                            <constraint firstItem="aHI-CH-qLN" firstAttribute="leading" secondItem="tNw-Uh-PiC" secondAttribute="leading" constant="96" id="Xks-RT-k79"/>
+                            <constraint firstItem="kQJ-RO-E0V" firstAttribute="centerX" secondItem="Qru-5J-aAa" secondAttribute="centerX" id="dxD-Ri-oYP"/>
+                            <constraint firstItem="kQJ-RO-E0V" firstAttribute="leading" secondItem="tNw-Uh-PiC" secondAttribute="leading" constant="96" id="h8B-UR-dUO"/>
+                            <constraint firstItem="9IH-qT-DH8" firstAttribute="leading" secondItem="tNw-Uh-PiC" secondAttribute="leading" constant="95" id="jbZ-4R-XaJ"/>
+                            <constraint firstItem="tNw-Uh-PiC" firstAttribute="trailing" secondItem="aHI-CH-qLN" secondAttribute="trailing" constant="93.670000000000002" id="kyH-K4-A7a"/>
+                            <constraint firstItem="kQJ-RO-E0V" firstAttribute="top" secondItem="9IH-qT-DH8" secondAttribute="bottom" constant="42.670000000000002" id="nAl-1Y-ycN"/>
+                            <constraint firstItem="XVL-xd-Mm9" firstAttribute="leading" secondItem="tNw-Uh-PiC" secondAttribute="leading" constant="25" id="pKJ-lD-uQP"/>
+                            <constraint firstItem="tNw-Uh-PiC" firstAttribute="trailing" secondItem="9IH-qT-DH8" secondAttribute="trailing" constant="94.670000000000002" id="ptI-EN-WuK"/>
+                            <constraint firstItem="9IH-qT-DH8" firstAttribute="top" secondItem="aHI-CH-qLN" secondAttribute="bottom" id="v8U-vf-Rlg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9L5-Cy-Kk5"/>
                 </viewController>
@@ -109,36 +122,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENTER YOUR PHONE NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-b6-kjq">
-                                <rect key="frame" x="41" y="327" width="311" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER YOUR PHONE NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-b6-kjq">
+                                <rect key="frame" x="40" y="100" width="313" height="23"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TRj-E7-YVE">
-                                <rect key="frame" x="80" y="369" width="272" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TRj-E7-YVE">
+                                <rect key="frame" x="79" y="133" width="274" height="34"/>
                                 <color key="backgroundColor" red="0.88457041979999995" green="0.88885730500000004" blue="0.86317855119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-c7-7dY">
-                                <rect key="frame" x="38" y="375" width="34" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpo-c7-7dY">
+                                <rect key="frame" x="40" y="138" width="34" height="23"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGJ-Zp-8TF">
-                                <rect key="frame" x="95" y="419" width="203.33333333333348" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGJ-Zp-8TF">
+                                <rect key="frame" x="95" y="182" width="203" height="37"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
                                 <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="LOGIN"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SEND OTP">
-                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sendVerification" destination="Uss-FC-tEg" eventType="touchUpInside" id="ul4-ma-pdv"/>
@@ -147,6 +156,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zGK-s1-yft"/>
                         <color key="backgroundColor" red="0.97241288420000005" green="0.97666031119999996" blue="0.94902902840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bpo-c7-7dY" firstAttribute="leading" secondItem="zGK-s1-yft" secondAttribute="leading" constant="40" id="3yu-DZ-j7a"/>
+                            <constraint firstItem="TRj-E7-YVE" firstAttribute="leading" secondItem="bpo-c7-7dY" secondAttribute="trailing" constant="5" id="FSQ-JC-ee3"/>
+                            <constraint firstItem="WGJ-Zp-8TF" firstAttribute="leading" secondItem="zGK-s1-yft" secondAttribute="leading" constant="95" id="JhJ-2L-yj5"/>
+                            <constraint firstItem="zGK-s1-yft" firstAttribute="trailing" secondItem="Jah-b6-kjq" secondAttribute="trailing" constant="40" id="KE6-A7-JoW"/>
+                            <constraint firstItem="WGJ-Zp-8TF" firstAttribute="top" secondItem="TRj-E7-YVE" secondAttribute="bottom" constant="15" id="QDT-6b-Lyx"/>
+                            <constraint firstItem="zGK-s1-yft" firstAttribute="trailing" secondItem="WGJ-Zp-8TF" secondAttribute="trailing" constant="95" id="R0k-pW-TOg"/>
+                            <constraint firstItem="zGK-s1-yft" firstAttribute="trailing" secondItem="TRj-E7-YVE" secondAttribute="trailing" constant="40" id="SXX-JW-s8p"/>
+                            <constraint firstItem="Jah-b6-kjq" firstAttribute="leading" secondItem="zGK-s1-yft" secondAttribute="leading" constant="40" id="UZD-2X-Rnm"/>
+                            <constraint firstItem="bpo-c7-7dY" firstAttribute="top" secondItem="Jah-b6-kjq" secondAttribute="bottom" constant="15" id="V8g-Rt-Qys"/>
+                            <constraint firstItem="TRj-E7-YVE" firstAttribute="top" secondItem="Jah-b6-kjq" secondAttribute="bottom" constant="10" id="ckA-j3-eC2"/>
+                            <constraint firstItem="Jah-b6-kjq" firstAttribute="top" secondItem="zGK-s1-yft" secondAttribute="top" constant="100" id="oW0-7f-Y2t"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cxj-YS-GDR"/>
                     <connections>
@@ -444,7 +466,7 @@
         <!--Find a Ride-->
         <scene sceneID="pCt-ej-63z">
             <objects>
-                <viewController title="Find a Ride" modalPresentationStyle="fullScreen" id="Fp9-F7-ac4" customClass="FindRideViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindRideViewController" title="Find a Ride" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fp9-F7-ac4" customClass="FindRideViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIN-kO-jRa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,6 +564,7 @@
                         <outlet property="mapView" destination="CuA-DO-fCd" id="GUz-FB-lfy"/>
                         <outlet property="originSearchBar" destination="wQd-uu-fib" id="Idh-a3-CrA"/>
                         <outlet property="suggestionsTableView" destination="Gnx-0h-lWa" id="gFe-N8-PeT"/>
+                        <segue destination="30E-de-9Ix" kind="presentation" identifier="FindRideToExisting" id="X8U-qy-E9i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoZ-SC-Irz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -716,14 +739,14 @@
         <!--Existing Rides-->
         <scene sceneID="mMb-mI-erO">
             <objects>
-                <viewController id="30E-de-9Ix" customClass="ExisitingRidesViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExistingRidesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="30E-de-9Ix" customClass="ExisitingRidesViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Yu-9x-qrJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A5m-1e-JIK">
-                                <rect key="frame" x="0.0" y="70" width="393" height="733"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="70" width="393" height="772"/>
+                                <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="VrV-dK-YhL" detailTextLabel="lzr-dH-DOQ" style="IBUITableViewCellStyleSubtitle" id="83O-Uy-pK4">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -747,25 +770,28 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="30E-de-9Ix" id="LW0-z8-8Ps"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existing Rides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll3-qo-n4O">
-                                <rect key="frame" x="10" y="10" width="144" height="50"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existing Rides" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll3-qo-n4O">
+                                <rect key="frame" x="10" y="10" width="373" height="50"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RtX-Tp-Jbz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="A5m-1e-JIK" firstAttribute="top" secondItem="RtX-Tp-Jbz" secondAttribute="top" constant="70" id="25J-Ep-mlp"/>
                             <constraint firstItem="Ll3-qo-n4O" firstAttribute="top" secondItem="RtX-Tp-Jbz" secondAttribute="top" constant="10" id="7bL-gQ-rYI"/>
+                            <constraint firstItem="Ll3-qo-n4O" firstAttribute="centerX" secondItem="7Yu-9x-qrJ" secondAttribute="centerX" id="KDY-E9-Ev4"/>
                             <constraint firstItem="A5m-1e-JIK" firstAttribute="leading" secondItem="RtX-Tp-Jbz" secondAttribute="leading" id="OhA-x1-ybI"/>
                             <constraint firstItem="Ll3-qo-n4O" firstAttribute="leading" secondItem="RtX-Tp-Jbz" secondAttribute="leading" constant="10" id="kB3-ew-HBG"/>
                             <constraint firstItem="RtX-Tp-Jbz" firstAttribute="trailing" secondItem="A5m-1e-JIK" secondAttribute="trailing" id="oUx-oK-hao"/>
@@ -778,15 +804,107 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="existingRidesTableView" destination="A5m-1e-JIK" id="0jZ-dq-skb"/>
+                        <segue destination="0m2-XD-vCD" kind="show" identifier="ExistingToSelected" id="4Fk-He-6U2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuL-5S-yWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805" y="1308"/>
+            <point key="canvasLocation" x="2926" y="1263"/>
+        </scene>
+        <!--Selected Ride View Controller-->
+        <scene sceneID="nWm-zl-Bpw">
+            <objects>
+                <viewController storyboardIdentifier="SelectedRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0m2-XD-vCD" customClass="SelectedRideViewController" customModule="CarPoolIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2V-8c-oiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manipal → Bengaluru" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-gj-QeT">
+                                <rect key="frame" x="15.000000000000014" y="0.0" width="227.33333333333337" height="28.666666666666668"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-6f-v3x">
+                                <rect key="frame" x="15" y="309" width="363" height="116"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Number: MH54324321" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-H2-jcJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="237.33333333333334" height="23"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Arnav" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grH-n1-sV7">
+                                        <rect key="frame" x="0.0" y="31" width="109.33333333333333" height="23"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number: 9984940708" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8be-jd-8SW">
+                                        <rect key="frame" x="0.0" y="62" width="234.33333333333334" height="23"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender: Male" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtB-MA-eRo">
+                                        <rect key="frame" x="0.0" y="93" width="113" height="23"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-WZ-UuP">
+                                <rect key="frame" x="129" y="475" width="135.33333333333337" height="37"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                <color key="tintColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Accept RIde"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Accept Ride">
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irr-my-R8Q">
+                                <rect key="frame" x="16" y="63" width="363" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="BkG-gG-T0J"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yMU-aC-R1i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CAu-gj-QeT" firstAttribute="top" secondItem="yMU-aC-R1i" secondAttribute="top" id="1JH-6R-2Cw"/>
+                            <constraint firstItem="JQh-WZ-UuP" firstAttribute="centerX" secondItem="g2V-8c-oiZ" secondAttribute="centerX" id="Se9-D3-CwZ"/>
+                            <constraint firstItem="irr-my-R8Q" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="16" id="X8D-S5-abU"/>
+                            <constraint firstItem="yMU-aC-R1i" firstAttribute="trailing" secondItem="irr-my-R8Q" secondAttribute="trailing" constant="14" id="Xhy-K7-mkv"/>
+                            <constraint firstItem="irr-my-R8Q" firstAttribute="top" secondItem="CAu-gj-QeT" secondAttribute="bottom" constant="34.329999999999998" id="acu-zD-Bla"/>
+                            <constraint firstItem="h7Y-6f-v3x" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="15" id="b5a-IC-2KY"/>
+                            <constraint firstItem="h7Y-6f-v3x" firstAttribute="top" secondItem="irr-my-R8Q" secondAttribute="bottom" constant="17" id="e9d-S0-6dL"/>
+                            <constraint firstItem="CAu-gj-QeT" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="15" id="q7R-Zr-784"/>
+                            <constraint firstItem="JQh-WZ-UuP" firstAttribute="top" secondItem="h7Y-6f-v3x" secondAttribute="bottom" constant="50" id="vmx-MS-pS4"/>
+                            <constraint firstItem="yMU-aC-R1i" firstAttribute="trailing" secondItem="h7Y-6f-v3x" secondAttribute="trailing" constant="15" id="xUC-Tf-2n4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EuP-AM-naY"/>
+                    <connections>
+                        <outlet property="genderLabel" destination="jtB-MA-eRo" id="t4F-Xz-Pdh"/>
+                        <outlet property="mapView" destination="irr-my-R8Q" id="peR-hz-JKf"/>
+                        <outlet property="nameLabel" destination="grH-n1-sV7" id="r8t-7u-z81"/>
+                        <outlet property="phoneNumberLabel" destination="8be-jd-8SW" id="4gL-gc-ugD"/>
+                        <outlet property="plateNumberLabel" destination="Veh-H2-jcJ" id="c9g-WM-fxf"/>
+                        <outlet property="toFroLabel" destination="CAu-gj-QeT" id="LvH-7i-GUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTF-07-8UB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925.9541984732823" y="2025.3521126760565"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WSI-3a-PMb"/>
+        <segue reference="X8U-qy-E9i"/>
+        <segue reference="5FP-Uw-3jZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LandingPageIcon" width="540" height="540"/>

@@ -47,6 +47,20 @@ class DatabaseManager{
         }
     }
     
+    func fetchUser(phoneNumber: String) -> UserEntity? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
+        fetchRequest.predicate = NSPredicate(format: "mobNo == %@", phoneNumber)
+        
+        do {
+            let result = try context.fetch(fetchRequest) as? [UserEntity]
+            return result![0]
+        }
+        catch {
+            print("Fetch error", error)
+            return nil
+        }
+    }
+    
     func addFindRide(_ findRide: FindRide) {
         let findRideEntity = FindRideEntity(context: context)
         findRideEntity.origin = findRide.origin
@@ -86,5 +100,17 @@ class DatabaseManager{
         }
         return existingRides
         
+    }
+    
+    func fetchFilteredRide(origin: String, destination: String) -> [OfferRideEntity] {
+        var existingRides: [OfferRideEntity] = []
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "OfferRideEntity")
+        fetchRequest.predicate = NSPredicate(format: "origin == %@ AND destination == %@", origin, destination)
+        do{
+            existingRides = try (context.fetch(fetchRequest) as? [OfferRideEntity])!
+        }catch{
+            print("Fetch user error", error)
+        }
+        return existingRides
     }
 }

@@ -14,18 +14,56 @@ class ExisitingRidesViewController: UIViewController {
     private var existingRides: [OfferRideEntity] = []
     private let manager = DatabaseManager()
     
+    var userPhoneNumber: String? = nil
+    var desiredOrigin: String?
+    var desiredDestination: String?
+    
+    var selectedRide: OfferRideEntity = OfferRideEntity()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        existingRidesTableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        existingRides = manager.fetchExistingRides()
+        if let desiredOrigin = desiredOrigin, let desiredDestination = desiredDestination {
+            existingRides = manager.fetchFilteredRide(origin: desiredOrigin, destination: desiredDestination)
+        }
+        else {
+            existingRides = manager.fetchExistingRides()
+            
+        }
         existingRidesTableView.reloadData()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ExistingToSelected" {
+            // Make sure to replace "YourSegueIdentifier" with the actual identifier of your segue
+
+            if let selectedRideViewController = segue.destination as? SelectedRideViewController {
+                // Pass the data to the destination view controller
+                selectedRideViewController.origin = selectedRide.origin!
+                selectedRideViewController.destination = selectedRide.destination!
+                selectedRideViewController.plateNumber = selectedRide.plateNumber!
+                selectedRideViewController.phoneNumber = selectedRide.phoneNumber!
+                
+                let selectedUser = manager.fetchUser(phoneNumber: selectedRide.phoneNumber!)
+                
+                selectedRideViewController.name = (selectedUser?.firstName)! + " " + (selectedUser?.lastName)!
+                selectedRideViewController.gender = selectedUser?.sex!
+            }
+        }
+    }
+}
+extension ExisitingRidesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected ride
+        self.selectedRide = existingRides[indexPath.row]
+
+
+        performSegue(withIdentifier: "ExistingToSelected", sender: nil)
+    }
 }
 
 extension ExisitingRidesViewController: UITableViewDataSource {

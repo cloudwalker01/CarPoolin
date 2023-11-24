@@ -61,7 +61,6 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         
         mapView.delegate = self
         
-        mapView.mapType = .standard
         mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeChanged), for: .valueChanged)
         
         let locationManager = CLLocationManager()
@@ -220,6 +219,58 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         present(alertController, animated: true, completion: nil)
     }
     
+    func drawRoute(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
+        // Remove existing overlays
+        mapView.removeOverlays(mapView.overlays)
+        
+        // Create source and destination map items
+        let sourcePlacemark = MKPlacemark(coordinate: origin, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destination, addressDictionary: nil)
+
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationItem = MKMapItem(placemark: destinationPlacemark)
+
+        // Create a request with source and destination items
+        let request = MKDirections.Request()
+        request.source = sourceItem
+        request.destination = destinationItem
+        request.transportType = .automobile
+
+        // Create a directions object
+        let directions = MKDirections(request: request)
+
+        // Calculate the route
+        directions.calculate { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("Error calculating route: \(error.localizedDescription)")
+                }
+                return
+            }
+
+            // Get the first route from the response
+            if let route = response.routes.first {
+                // Add the route as an overlay on the map
+                self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+                
+                // Set the visible region to include the route
+                let rect = route.polyline.boundingMapRect
+                self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            }
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 3
+            return renderer
+        }
+        return MKOverlayRenderer()
+    }
+
+    
     @IBAction func submitFindRidePressed(_ sender: Any) {
         guard let origin = originSearchBar.text, !origin.isEmpty else {
             // Put alert
@@ -233,8 +284,27 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
             return
         }
         
-        let newFindRide = FindRide(origin: origin, destination: origin, phoneNumber: phoneNumber!)
+        // Assuming you have the coordinates of origin and destination
+        let originCoordinate = originAnnotation?.coordinate ?? CLLocationCoordinate2D()
+        let destinationCoordinate = destinationAnnotation?.coordinate ?? CLLocationCoordinate2D()
+
+        // Call the method to draw the route
+        drawRoute(from: originCoordinate, to: destinationCoordinate)
+
+        
+        let newFindRide = FindRide(origin: origin, destination: destination, phoneNumber: phoneNumber!)
         manager.addFindRide(newFindRide)
+        
+        showAlert(title: "Successful", message: "Request Submitted")
+        
+        if let tabBarController = self.tabBarController {
+            if let viewBController = tabBarController.viewControllers?[2] as? ExisitingRidesViewController {
+                        // Set the values in View B
+                viewBController.desiredOrigin = newFindRide.origin
+                viewBController.desiredDestination = newFindRide.destination
+            }
+            tabBarController.selectedIndex = 2
+        }
     }
     /*
     // MARK: - Navigation

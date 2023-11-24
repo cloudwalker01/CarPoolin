@@ -208,6 +208,57 @@ class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocation
         present(alertController, animated: true, completion: nil)
     }
     
+    func drawRoute(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) {
+        // Remove existing overlays
+        mapView.removeOverlays(mapView.overlays)
+        
+        // Create source and destination map items
+        let sourcePlacemark = MKPlacemark(coordinate: origin, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destination, addressDictionary: nil)
+
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationItem = MKMapItem(placemark: destinationPlacemark)
+
+        // Create a request with source and destination items
+        let request = MKDirections.Request()
+        request.source = sourceItem
+        request.destination = destinationItem
+        request.transportType = .automobile
+
+        // Create a directions object
+        let directions = MKDirections(request: request)
+
+        // Calculate the route
+        directions.calculate { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("Error calculating route: \(error.localizedDescription)")
+                }
+                return
+            }
+
+            // Get the first route from the response
+            if let route = response.routes.first {
+                // Add the route as an overlay on the map
+                self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+                
+                // Set the visible region to include the route
+                let rect = route.polyline.boundingMapRect
+                self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            }
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 3
+            return renderer
+        }
+        return MKOverlayRenderer()
+    }
+    
     @IBAction func offerRideButtonPressed(_ sender: Any) {
         guard let origin = originSearchBar.text, !origin.isEmpty else {
             // Put alert
@@ -231,7 +282,15 @@ class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocation
         let newOfferRide = OfferRide(origin: origin, destination: destination, phoneNumber: phoneNumber!, plateNumber: plateNumber, date: Date())
         manager.addOfferRide(newOfferRide)
         
+        
+        // Assuming you have the coordinates of origin and destination
+        let originCoordinate = originAnnotation?.coordinate ?? CLLocationCoordinate2D()
+        let destinationCoordinate = destinationAnnotation?.coordinate ?? CLLocationCoordinate2D()
+
+        // Call the method to draw the route
+        drawRoute(from: originCoordinate, to: destinationCoordinate)
         showAlert(title: "Successful", message: "Ride offered")
+        
         originSearchBar.text=""
         destinationSearchBar.text=""
         plateNumberTextField.text=""

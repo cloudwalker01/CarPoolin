@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet var genderPicker: UIPickerView!
     
     let phoneNumber:String
-    var selectedGender: String = ""
+    var selectedGender: String = "Male"
     var selectedAge: Int = 1
     
     private let manager = DatabaseManager()
