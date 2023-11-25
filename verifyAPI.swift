@@ -40,7 +40,7 @@ struct CheckResult: Codable, WithMessage {
 
 
 struct VerifyAPI {
-    private static let baseURLString = "http://127.0.0.1:5000"
+    private static let baseURLString = "https://9e38-122-167-144-170.ngrok-free.app"
 
     static func createRequest(_ path: String,
                               _ parameters: [String: String],

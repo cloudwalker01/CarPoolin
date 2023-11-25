@@ -285,11 +285,7 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         }
         
         // Assuming you have the coordinates of origin and destination
-        let originCoordinate = originAnnotation?.coordinate ?? CLLocationCoordinate2D()
-        let destinationCoordinate = destinationAnnotation?.coordinate ?? CLLocationCoordinate2D()
-
-        // Call the method to draw the route
-        drawRoute(from: originCoordinate, to: destinationCoordinate)
+        
 
         
         let newFindRide = FindRide(origin: origin, destination: destination, phoneNumber: phoneNumber!)
@@ -298,7 +294,9 @@ class FindRideViewController: UIViewController, UISearchBarDelegate, MKMapViewDe
         showAlert(title: "Successful", message: "Request Submitted")
         
         if let tabBarController = self.tabBarController {
-            if let viewBController = tabBarController.viewControllers?[2] as? ExisitingRidesViewController {
+            if let viewBController = tabBarController.viewControllers?[2] as?
+                
+                ExisitingRidesViewController {
                         // Set the values in View B
                 viewBController.desiredOrigin = newFindRide.origin
                 viewBController.desiredDestination = newFindRide.destination

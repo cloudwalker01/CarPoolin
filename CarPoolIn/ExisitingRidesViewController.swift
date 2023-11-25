@@ -17,11 +17,11 @@ class ExisitingRidesViewController: UIViewController {
     var userPhoneNumber: String? = nil
     var desiredOrigin: String?
     var desiredDestination: String?
-    
     var selectedRide: OfferRideEntity = OfferRideEntity()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         existingRidesTableView.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -32,9 +32,12 @@ class ExisitingRidesViewController: UIViewController {
             existingRides = manager.fetchFilteredRide(origin: desiredOrigin, destination: desiredDestination)
         }
         else {
+            
             existingRides = manager.fetchExistingRides()
             
         }
+        desiredOrigin = nil
+        desiredDestination = nil
         existingRidesTableView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

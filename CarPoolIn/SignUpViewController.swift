@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
@@ -38,6 +38,8 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         genderPicker.dataSource = self
         genderPicker.delegate = self
+        
+        email.delegate = self
     }
 
     // MARK: - UIPickerViewDataSource
@@ -114,6 +116,15 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         alertController.addAction(okAction)
 
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Dismiss the keyboard
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true) // Dismiss the keyboard when tapping outside the text field
     }
     
     @IBAction func submitPressed(_ sender: Any) {

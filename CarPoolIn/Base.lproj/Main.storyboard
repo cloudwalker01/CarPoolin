@@ -23,7 +23,7 @@
                                 <rect key="frame" x="125" y="156" width="143" height="540"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarPoolIn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJV-Am-p99">
-                                <rect key="frame" x="50" y="754.33333333333337" width="293" height="28.666666666666629"/>
+                                <rect key="frame" x="50" y="754" width="293" height="29"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,12 +42,11 @@
                     </view>
                     <connections>
                         <segue destination="Wka-gA-1wY" kind="presentation" identifier="LandingToLogin" id="C3E-8L-7ge"/>
-                        <segue destination="AHh-g6-Cf3" kind="presentation" identifier="DashboardDebug" id="WSI-3a-PMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-544" y="-56"/>
+            <point key="canvasLocation" x="-553" y="-56"/>
         </scene>
         <!--Login Entry View Controller-->
         <scene sceneID="mib-ih-xS0">
@@ -112,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fm-L5-E5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="-56"/>
+            <point key="canvasLocation" x="276" y="-56"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="JSw-t3-8P8">
@@ -189,122 +188,119 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3od-Al-FDE">
-                                <rect key="frame" x="196.66666666666666" y="456" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-X4-He7">
-                                <rect key="frame" x="34" y="396" width="325" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="sM0-ja-Jgp">
+                                <rect key="frame" x="34" y="150" width="325" height="249"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fa-pC-nMX">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="m64-48-doY"/>
-                                            <constraint firstAttribute="height" constant="50" id="oih-Mr-A00"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byx-IK-TA8">
-                                        <rect key="frame" x="55" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="2RU-xD-afa"/>
-                                            <constraint firstAttribute="width" constant="50" id="9wy-T9-Vh5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-Et-tzk">
-                                        <rect key="frame" x="110" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Ka5-Sa-D92"/>
-                                            <constraint firstAttribute="width" constant="50" id="Opt-lV-fDM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l45-DW-wQx">
-                                        <rect key="frame" x="165" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="MTA-uP-1bT"/>
-                                            <constraint firstAttribute="height" constant="50" id="jYV-1Q-HH5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thO-8N-Q8C">
-                                        <rect key="frame" x="220" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="47w-n9-t0n"/>
-                                            <constraint firstAttribute="width" constant="50" id="C71-HM-t44"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0aQ-Sm-Uik">
-                                        <rect key="frame" x="275" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="b7z-vK-m2w"/>
-                                            <constraint firstAttribute="width" constant="50" id="gnq-48-ZAg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER THE OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-CS-tU6">
+                                        <rect key="frame" x="78.666666666666671" y="0.0" width="167.66666666666663" height="23"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-X4-He7">
+                                        <rect key="frame" x="0.0" y="36" width="325" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fa-pC-nMX">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="m64-48-doY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="oih-Mr-A00"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byx-IK-TA8">
+                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2RU-xD-afa"/>
+                                                    <constraint firstAttribute="width" constant="50" id="9wy-T9-Vh5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-Et-tzk">
+                                                <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ka5-Sa-D92"/>
+                                                    <constraint firstAttribute="width" constant="50" id="Opt-lV-fDM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l45-DW-wQx">
+                                                <rect key="frame" x="165" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="MTA-uP-1bT"/>
+                                                    <constraint firstAttribute="height" constant="50" id="jYV-1Q-HH5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thO-8N-Q8C">
+                                                <rect key="frame" x="220" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="47w-n9-t0n"/>
+                                                    <constraint firstAttribute="width" constant="50" id="C71-HM-t44"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0aQ-Sm-Uik">
+                                                <rect key="frame" x="275" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.88701579861501345" green="0.88847395505856963" blue="0.8630035940361459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="b7z-vK-m2w"/>
+                                                    <constraint firstAttribute="width" constant="50" id="gnq-48-ZAg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3od-Al-FDE">
+                                        <rect key="frame" x="137.66666666666666" y="99" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-OL-9rB">
+                                        <rect key="frame" x="112.33333333333334" y="162" width="100.66666666666666" height="37"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
+                                        <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="LOGIN"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="VERIFY">
+                                            <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="validateCode" destination="wPi-JW-v82" eventType="touchUpInside" id="5u1-Fi-civ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5f-sB-74w">
+                                        <rect key="frame" x="115.66666666666666" y="212" width="93.666666666666657" height="37"/>
+                                        <color key="tintColor" red="0.0" green="0.32002841900302542" blue="0.48058628483588928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="CLEAR">
+                                            <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clearPressed:" destination="wPi-JW-v82" eventType="touchUpInside" id="08g-fY-7Np"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-OL-9rB">
-                                <rect key="frame" x="146.33333333333334" y="481" width="100.66666666666666" height="37"/>
-                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="15"/>
-                                <color key="tintColor" red="0.050273321570000001" green="0.15643686060000001" blue="0.20783314110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="LOGIN"/>
-                                <buttonConfiguration key="configuration" style="filled" title="VERIFY">
-                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="validateCode" destination="wPi-JW-v82" eventType="touchUpInside" id="5u1-Fi-civ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5f-sB-74w">
-                                <rect key="frame" x="149.66666666666666" y="528" width="93.666666666666657" height="37"/>
-                                <color key="tintColor" red="0.0" green="0.32002841900302542" blue="0.48058628483588928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="CLEAR">
-                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="clearPressed:" destination="wPi-JW-v82" eventType="touchUpInside" id="08g-fY-7Np"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER THE OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-CS-tU6">
-                                <rect key="frame" x="112.66666666666667" y="363" width="167.66666666666663" height="23"/>
-                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RrM-vp-S6i"/>
                         <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="W6o-OL-9rB" firstAttribute="top" secondItem="3od-Al-FDE" secondAttribute="bottom" constant="25" id="B23-gD-dhO"/>
-                            <constraint firstItem="dw5-X4-He7" firstAttribute="centerY" secondItem="Xf9-c6-OWl" secondAttribute="centerY" id="BO6-BO-OCY"/>
-                            <constraint firstItem="3od-Al-FDE" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="Cnl-y9-RBu"/>
-                            <constraint firstItem="dw5-X4-He7" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="Rnf-NZ-jGs"/>
-                            <constraint firstItem="dw5-X4-He7" firstAttribute="top" secondItem="bIA-CS-tU6" secondAttribute="bottom" constant="10" id="XjZ-OE-bmL"/>
-                            <constraint firstItem="bIA-CS-tU6" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="Zyh-yp-9bT"/>
-                            <constraint firstItem="K5f-sB-74w" firstAttribute="top" secondItem="W6o-OL-9rB" secondAttribute="bottom" constant="10" id="igf-LF-CE1"/>
-                            <constraint firstItem="W6o-OL-9rB" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="klz-AV-MdR"/>
-                            <constraint firstItem="3od-Al-FDE" firstAttribute="top" secondItem="dw5-X4-He7" secondAttribute="bottom" constant="10" id="oct-94-EXg"/>
-                            <constraint firstItem="K5f-sB-74w" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="vrN-fk-7hE"/>
+                            <constraint firstItem="sM0-ja-Jgp" firstAttribute="centerX" secondItem="Xf9-c6-OWl" secondAttribute="centerX" id="1HU-Tt-13w"/>
+                            <constraint firstItem="sM0-ja-Jgp" firstAttribute="top" secondItem="RrM-vp-S6i" secondAttribute="top" constant="150" id="gM1-ie-Ebo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oRo-9R-kYU"/>
@@ -569,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoZ-SC-Irz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831" y="1263"/>
+            <point key="canvasLocation" x="1315" y="1263"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5Jt-1H-abV">
@@ -578,14 +574,98 @@
                     <view key="view" contentMode="scaleToFill" id="S5y-70-iwh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J9-lS-bQd">
+                                <rect key="frame" x="10" y="10.000000000000002" width="373" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bR2-Xd-od5">
+                                <rect key="frame" x="20" y="244.66666666666669" width="353" height="211.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: Arnav Agarwal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-2q-bBP">
+                                        <rect key="frame" x="0.0" y="0.0" width="224.66666666666666" height="25.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number: +919984940708" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-NG-B6p">
+                                        <rect key="frame" x="0.0" y="40.333333333333343" width="312.66666666666669" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail ID: arnav123456789@gmail.com" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyR-RC-YOL">
+                                        <rect key="frame" x="0.0" y="80.666666666666657" width="286" height="50.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoj-06-Z1U">
+                                        <rect key="frame" x="0.0" y="146.00000000000003" width="71.666666666666671" height="25.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex: Male" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-2o-2Qe">
+                                        <rect key="frame" x="0.0" y="186.33333333333334" width="98.666666666666671" height="25.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-X9-VFL">
+                                <rect key="frame" x="144" y="715.33333333333337" width="105" height="42.666666666666629"/>
+                                <color key="tintColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout">
+                                    <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="cXA-WQ-9Fx" eventType="touchUpInside" id="ONM-ea-5SW"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMI-uq-0OM">
+                                <rect key="frame" x="132.66666666666666" y="71.666666666666686" width="127.99999999999997" height="128"/>
+                                <color key="tintColor" red="0.0" green="0.32002841900000001" blue="0.48058628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Mdi-hu-ehh"/>
+                                    <constraint firstAttribute="width" constant="128" id="io0-9q-2Sd"/>
+                                </constraints>
+                                <imageReference key="image" image="ProfileIcon" symbolScale="large"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ca2-Hh-Nyb"/>
                         <color key="backgroundColor" red="0.97118002179999996" green="0.97751921419999999" blue="0.94474202389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2J9-lS-bQd" firstAttribute="top" secondItem="ca2-Hh-Nyb" secondAttribute="top" constant="10" id="CEf-4V-8LK"/>
+                            <constraint firstItem="ca2-Hh-Nyb" firstAttribute="trailing" secondItem="2J9-lS-bQd" secondAttribute="trailing" constant="10" id="Dcd-pq-ejH"/>
+                            <constraint firstItem="ca2-Hh-Nyb" firstAttribute="bottom" secondItem="ogh-X9-VFL" secondAttribute="bottom" constant="45" id="LvX-Bc-Nma"/>
+                            <constraint firstItem="bR2-Xd-od5" firstAttribute="top" secondItem="DMI-uq-0OM" secondAttribute="bottom" constant="45" id="NxU-Z9-8hG"/>
+                            <constraint firstItem="DMI-uq-0OM" firstAttribute="top" secondItem="2J9-lS-bQd" secondAttribute="bottom" constant="33" id="WRc-uy-fYr"/>
+                            <constraint firstItem="bR2-Xd-od5" firstAttribute="leading" secondItem="ca2-Hh-Nyb" secondAttribute="leading" constant="20" id="XwF-na-eKG"/>
+                            <constraint firstItem="DMI-uq-0OM" firstAttribute="centerX" secondItem="S5y-70-iwh" secondAttribute="centerX" id="bsp-Jp-R3y"/>
+                            <constraint firstItem="ogh-X9-VFL" firstAttribute="centerX" secondItem="S5y-70-iwh" secondAttribute="centerX" id="g82-5L-d7J"/>
+                            <constraint firstItem="ca2-Hh-Nyb" firstAttribute="trailing" secondItem="bR2-Xd-od5" secondAttribute="trailing" constant="20" id="ivS-ds-eLT"/>
+                            <constraint firstItem="2J9-lS-bQd" firstAttribute="leading" secondItem="ca2-Hh-Nyb" secondAttribute="leading" constant="10" id="xIu-5L-dC8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="O1Z-di-bF7"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="eoj-06-Z1U" id="rh1-St-xpD"/>
+                        <outlet property="emailLabel" destination="qyR-RC-YOL" id="dCV-Ji-U1M"/>
+                        <outlet property="nameLabel" destination="9Li-2q-bBP" id="SP1-0T-hvK"/>
+                        <outlet property="phoneNumberLabel" destination="nJH-NG-B6p" id="447-A6-WXU"/>
+                        <outlet property="sexLabel" destination="ZIa-2o-2Qe" id="80k-Gt-c4N"/>
+                        <segue destination="Wka-gA-1wY" kind="presentation" identifier="LoggedOut" id="ycO-iY-u2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zL-CJ-TWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3834" y="1263"/>
+            <point key="canvasLocation" x="4541" y="1263"/>
         </scene>
         <!--Offer a Ride-->
         <scene sceneID="PVz-hw-A4f">
@@ -711,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpy-Q1-rEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="1263"/>
+            <point key="canvasLocation" x="2276" y="1263"/>
         </scene>
         <!--Dashboard Tab Bar Controller-->
         <scene sceneID="x8x-sL-beX">
@@ -809,7 +889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuL-5S-yWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926" y="1263"/>
+            <point key="canvasLocation" x="3628" y="1263"/>
         </scene>
         <!--Selected Ride View Controller-->
         <scene sceneID="nWm-zl-Bpw">
@@ -820,13 +900,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manipal → Bengaluru" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAu-gj-QeT">
-                                <rect key="frame" x="15.000000000000014" y="0.0" width="227.33333333333337" height="28.666666666666668"/>
+                                <rect key="frame" x="15" y="20" width="363" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-6f-v3x">
-                                <rect key="frame" x="15" y="309" width="363" height="116"/>
+                                <rect key="frame" x="15" y="329" width="363" height="116"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plate Number: MH54324321" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-H2-jcJ">
                                         <rect key="frame" x="0.0" y="0.0" width="237.33333333333334" height="23"/>
@@ -855,7 +935,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-WZ-UuP">
-                                <rect key="frame" x="129" y="475" width="135.33333333333337" height="37"/>
+                                <rect key="frame" x="129" y="495" width="135.33333333333337" height="37"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 <color key="tintColor" red="0.0" green="0.1511599123" blue="0.22538822889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -863,9 +943,12 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Accept Ride">
                                     <fontDescription key="titleFontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="acceptPressed:" destination="0m2-XD-vCD" eventType="touchUpInside" id="ndU-Bi-sfn"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irr-my-R8Q">
-                                <rect key="frame" x="16" y="63" width="363" height="229"/>
+                                <rect key="frame" x="16" y="83" width="363" height="229"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="229" id="BkG-gG-T0J"/>
                                 </constraints>
@@ -875,13 +958,14 @@
                         <viewLayoutGuide key="safeArea" id="yMU-aC-R1i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CAu-gj-QeT" firstAttribute="top" secondItem="yMU-aC-R1i" secondAttribute="top" id="1JH-6R-2Cw"/>
+                            <constraint firstItem="CAu-gj-QeT" firstAttribute="top" secondItem="yMU-aC-R1i" secondAttribute="top" constant="20" id="1JH-6R-2Cw"/>
                             <constraint firstItem="JQh-WZ-UuP" firstAttribute="centerX" secondItem="g2V-8c-oiZ" secondAttribute="centerX" id="Se9-D3-CwZ"/>
                             <constraint firstItem="irr-my-R8Q" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="16" id="X8D-S5-abU"/>
                             <constraint firstItem="yMU-aC-R1i" firstAttribute="trailing" secondItem="irr-my-R8Q" secondAttribute="trailing" constant="14" id="Xhy-K7-mkv"/>
                             <constraint firstItem="irr-my-R8Q" firstAttribute="top" secondItem="CAu-gj-QeT" secondAttribute="bottom" constant="34.329999999999998" id="acu-zD-Bla"/>
                             <constraint firstItem="h7Y-6f-v3x" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="15" id="b5a-IC-2KY"/>
                             <constraint firstItem="h7Y-6f-v3x" firstAttribute="top" secondItem="irr-my-R8Q" secondAttribute="bottom" constant="17" id="e9d-S0-6dL"/>
+                            <constraint firstItem="yMU-aC-R1i" firstAttribute="trailing" secondItem="CAu-gj-QeT" secondAttribute="trailing" constant="15" id="ghX-vy-0X7"/>
                             <constraint firstItem="CAu-gj-QeT" firstAttribute="leading" secondItem="yMU-aC-R1i" secondAttribute="leading" constant="15" id="q7R-Zr-784"/>
                             <constraint firstItem="JQh-WZ-UuP" firstAttribute="top" secondItem="h7Y-6f-v3x" secondAttribute="bottom" constant="50" id="vmx-MS-pS4"/>
                             <constraint firstItem="yMU-aC-R1i" firstAttribute="trailing" secondItem="h7Y-6f-v3x" secondAttribute="trailing" constant="15" id="xUC-Tf-2n4"/>
@@ -899,15 +983,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTF-07-8UB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2925.9541984732823" y="2025.3521126760565"/>
+            <point key="canvasLocation" x="3627" y="2039"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="X8U-qy-E9i"/>
         <segue reference="5FP-Uw-3jZ"/>
+        <segue reference="C3E-8L-7ge"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LandingPageIcon" width="540" height="540"/>
+        <image name="ProfileIcon" width="512" height="512"/>
         <image name="car.2.fill" catalog="system" width="128" height="82"/>
         <image name="car.fill" catalog="system" width="128" height="95"/>
         <image name="carseat.left.fill" catalog="system" width="128" height="109"/>

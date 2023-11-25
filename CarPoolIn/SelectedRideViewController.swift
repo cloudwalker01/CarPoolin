@@ -34,7 +34,7 @@ class SelectedRideViewController: UIViewController, MKMapViewDelegate, CLLocatio
         super.viewDidLoad()
         
         toFroLabel.text = origin! + " → " + destination!
-        plateNumberLabel.text = "PlateNumber: " + plateNumber!
+        plateNumberLabel.text = "Plate Number: " + plateNumber!
         nameLabel.text = "Name: " + name!
         phoneNumberLabel.text = "Phone Number: " + phoneNumber!
         genderLabel.text = "Gender: " + gender!
@@ -80,8 +80,6 @@ class SelectedRideViewController: UIViewController, MKMapViewDelegate, CLLocatio
                 print("Error: One or both annotations are nil.")
             }
         }
-
-        // Do any additional setup after loading the view.
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -113,30 +111,7 @@ class SelectedRideViewController: UIViewController, MKMapViewDelegate, CLLocatio
             }
         }
     }
-
-//    func searchForLocation(_ searchText: String) -> MKPointAnnotation? {
-//        let request = MKLocalSearch.Request()
-//        request.naturalLanguageQuery = searchText
-//        var annotation: MKPointAnnotation? = nil
-//        
-//        let search = MKLocalSearch(request: request)
-//        search.start { (response, error) in
-//            guard let response = response, error == nil else {
-//                print("Error searching for location: \(error?.localizedDescription ?? "Unknown error")")
-//                return
-//            }
-//
-//            if let mapItem = response.mapItems.first {
-//                // Handle the first result (you can iterate through results if needed)
-//                 annotation = self.displayLocationOnMap(mapItem)
-////                print("Location Coordinate: \(annotation?.coordinate ?? CLLocationCoordinate2D())")
-//            }
-//        }
-//        return annotation
-//    }
     
-    
-
     func displayLocationOnMap(_ mapItem: MKMapItem) -> MKPointAnnotation {
 
         // Add a new annotation for the selected location
@@ -149,6 +124,7 @@ class SelectedRideViewController: UIViewController, MKMapViewDelegate, CLLocatio
         // Optionally, zoom the map to the selected location
         let region = MKCoordinateRegion(center: mapItem.placemark.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         mapView.setRegion(region, animated: true)
+        
         
         return annotation
     }
@@ -203,10 +179,26 @@ class SelectedRideViewController: UIViewController, MKMapViewDelegate, CLLocatio
         }
         return MKOverlayRenderer()
     }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                // Handle OK button tap, if needed
+        }
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+    
+
+     @IBAction func acceptPressed(_ sender: Any) {
+         showAlert(title: "Ride Accepted", message: "Enjoy your Ride!")
+     }
+    
     /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

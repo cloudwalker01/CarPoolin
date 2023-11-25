@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
+class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate, MKLocalSearchCompleterDelegate, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, UITextFieldDelegate {
 
     
 
@@ -50,6 +50,7 @@ class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocation
         suggestionsTableView.delegate = self
         suggestionsTableView.dataSource = self
         suggestionsTableView.isHidden = true
+        plateNumberTextField.delegate = self
         
         mapView.delegate = self
         
@@ -257,6 +258,15 @@ class OfferRideViewController: UIViewController, UISearchBarDelegate, CLLocation
             return renderer
         }
         return MKOverlayRenderer()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Dismiss the keyboard
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true) // Dismiss the keyboard when tapping outside the text field
     }
     
     @IBAction func offerRideButtonPressed(_ sender: Any) {

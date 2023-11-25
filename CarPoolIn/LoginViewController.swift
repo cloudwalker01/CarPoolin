@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // Replace the baseURLString with your local server address
-    private static let baseURLString = "http://127.0.0.1:5000"
+    private static let baseURLString = "https://9e38-122-167-144-170.ngrok-free.app"
        
     @IBOutlet var countryCodeField: UILabel! = UILabel()
     @IBOutlet var phoneNumberField: UITextField! = UITextField()
