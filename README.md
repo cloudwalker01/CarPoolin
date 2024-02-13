@@ -4,4 +4,4 @@ It is built for iOS. It has been powered by the Twilio API for login and verific
 
 1. Make sure you have the latest version of XCode installed.
 2. Run and Build the app.
-3. Run the Twilio verify-server API by executing the command 'flask run'
+3. Run the Twilio verify-server API by executing the command `flask run`
